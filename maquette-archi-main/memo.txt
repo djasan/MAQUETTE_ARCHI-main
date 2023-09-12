@@ -1,0 +1,137 @@
+propriétés utilisées :
+
+    background-image: Il définit l'image de fond pour l'élément #img-header.
+    background-position: center: Il centre l'image de fond horizontalement et verticalement.
+    height: 30vh: Il définit la hauteur de #img-header à 30% de la hauteur de la vue (viewport height).
+    background-repeat: no-repeat: Il empêche la répétition de l'image de fond.
+    background-size: cover: Il assure que l'image de fond couvre entièrement l'élément #img-header.
+    display: flex: Il active le modèle de disposition flexible (Flexbox) pour l'élément.
+    justify-content: center; align-items: center;: Ces propriétés Flexbox sont utilisées pour centrer le contenu (texte) horizontalement et verticalement à l'intérieur de #img-header.
+    margin-top: 55px;: Il ajoute une marge en haut de l'élément #img-header.
+
+Avec ces styles, l'image de fond sera centrée et le texte sera centré au milieu de l'image de fond dans #img-header.
+
+
+/* Importation des fonts */
+@font-face {
+  font-family: "SEGOEUI";
+  src: url(../font/SEGOEUI.TTF);
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "playfairDR", serif;
+}
+
+/* En-tête */
+header {
+  position: relative;
+}
+
+#logo {
+  color: #130202;
+  padding: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+#logo span {
+  color: #130202;
+  padding: 0.5rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 11px 5px -6px rgba(0, 0, 0, 0.76);
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 8vh;
+  top: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  background-color: rgb(249, 250, 250);
+  top: 8vh;
+}
+
+nav li {
+  margin: 2rem;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ ul {
+  display: flex;
+}
+
+/* En-tête d'image */
+#img-header {
+  background-image: url(../img/architect.jpg);
+  background-position: center;
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+}
+
+#brimg {
+  background-color: rgba(0, 0, 0, 0.658);
+  font-weight: bold;
+  font-size: 5rem;
+  padding: 1rem;
+}
+
+#ARCHimg {
+  color: aliceblue;
+  font-weight: 300;
+  font-size: 5rem;
+  padding: 1rem;
+}
+
+/* Projets */
+#Projects {
+  padding: 5rem;
+}
+
+#gallery div {
+  position: relative;
+  vertical-align: bottom;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  height: 30vh;
+  width: 100%;
+  padding-right: 55px;
+  margin-top: 55px;
+}
+
+div h3, div h4, p {
+  font-weight: 300;
+  color: black;
+  padding: 0;
+  margin-right: 0;
+}
